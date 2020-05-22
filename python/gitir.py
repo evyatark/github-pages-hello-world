@@ -7,19 +7,21 @@ from lcrux import sleep
 WAIT_EVERY_X_DOWNLOADS = 5
 WAIT_INTERVAL_AFTER_DOWNLOADS = 10
 WAIT_AFTER_SECTION = True
-WAIT_INTERVAL_AFTER_SECTION = 30
+WAIT_INTERVAL_AFTER_SECTION = 30hg docker
+
 
 courses = [
-     #['https://git.ir/linkedin-building-a-small-business-website-with-wordpress/', 'Linkedin Learning - Building a Small Business Website with WordPress', 'wp1']
+    #['https://git.ir/codewithmosh-complete-sql-mastery/','Code with Mosh - Complete SQL Mastery', 'mosh101']
+    ['https://git.ir/codewithmosh-the-complete-python-programming-course/', 'Code With Mosh - The Complete Python Programming Course', 'python3']
+
     #,['https://git.ir/linkedin-essentials-of-css-for-react-developers/','Linkedin Learning - Essentials of Using CSS in React','reactcss']
-    , ['https://git.ir/linkedin-installing-and-running-wordpress-local-by-flywheel/', 'Linkedin Learning - Installing and Running WordPress Local by Flywheel', 'wp2']
     #,['https://git.ir/linkedin-wordpress-backing-up-your-site/','Linkedin Learning - WordPress Backing Up Your Site','wp3']
-    ,['https://git.ir/linkedin-cloud-native-development-with-node-js-docker-and-kubernetes/','Linkedin Learning - Cloud Native Development with Node.js Docker and Kubernetes','node1']
-    ,['https://git.ir/codewithmosh-complete-sql-mastery/','CodeWithMosh - Complete SQL Mastery','sql1']
-    , ['https://git.ir/codewithmosh-the-complete-nodejs-course/', 'Codewithmosh - The Complete Node.js Course', 'moshnode0']
-    ,['https://git.ir/linkedin-building-vue-and-node-apps-with-authentication/','Linkedin Learning - Learn How to Build Vue and Node Applications with Authentication','vue1']
+    #,['https://git.ir/linkedin-cloud-native-development-with-node-js-docker-and-kubernetes/','Linkedin Learning - Cloud Native Development with Node.js Docker and Kubernetes','node1']
+    #,['https://git.ir/codewithmosh-complete-sql-mastery/','CodeWithMosh - Complete SQL Mastery','sql1']
+    #, ['https://git.ir/codewithmosh-the-complete-nodejs-course/', 'Codewithmosh - The Complete Node.js Course', 'moshnode0']
+    #,['https://git.ir/linkedin-building-vue-and-node-apps-with-authentication/','Linkedin Learning - Learn How to Build Vue and Node Applications with Authentication','vue1']
     #, ['https://git.ir/packtpub-creating-smart-contracts-with-ethereum/', 'Packt - Creating Smart Contracts with Ethereum', 'blockchain1']
-    , ['https://git.ir/packtpub-blockchain-and-bitcoins-a-complete-package/', 'Packt - Blockchain and Bitcoins A Complete Package', 'blockchain2']
+    #, ['https://git.ir/packtpub-blockchain-and-bitcoins-a-complete-package/', 'Packt - Blockchain and Bitcoins A Complete Package', 'blockchain2']
 
     #['https://git.ir/linkedin-learn-apache-kafka-for-beginners/', 'Apache Kafka Training for Beginners', 'kafka1']
     # , ['https://git.ir/skillshare-scrapy-python-web-scraping-crawling-for-beginners/', 'SkillShare - Scrapy Python Web Scraping and Crawling for Beginners', '']
@@ -38,7 +40,6 @@ courses = [
     # , ['https://git.ir/linkedin-wordpress-contact-forms/', 'Linkedin Learning - WordPress Contact Forms', 'wp4']
     # , ['https://git.ir/linkedin-introducing-postman/', 'Linkedin Learning - Introducing Postman', 'postman1']
     # , ['https://git.ir/linkedin-css-selectors/', 'Linkedin Learning - CSS Selectors', 'css4']
-    # , ['https://git.ir/laracasts-testing-vue/', 'Laracasts - Testing Vue', 'vue2']
     # , ['https://git.ir/linkedin-learning-cloud-computing-core-concepts/', 'Linkedin Learning - Cloud Computing Core Concepts', 'cloud1']
     # , ['https://git.ir/linkedin-learning-cloud-computing-public-cloud-platforms/', 'Linkedin Learning - Cloud Computing Public Cloud Platforms', 'cloud2']
     # , ['https://git.ir/pluralsight-planning-and-configuring-a-cloud-solution-on-google-cloud/', 'Pluralsight - Planning and Configuring a Cloud Solution on Google Cloud', 'cloud3']

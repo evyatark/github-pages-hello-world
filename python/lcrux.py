@@ -11,7 +11,7 @@ courses = [
      #['https://www.learningcrux.com/course/apache-kafka-series-kafka-streams-for-data-processing', 'dummy', 'crux_kafka_stream']
      #,['https://www.learningcrux.com/course/splunk-2019-beginner-to-architect', 'dummy', 'crux_splunk']
      #,['https://www.learningcrux.com/course/python-3-deep-dive-part-1', 'dummy', 'crux_pythonDeepDive1']
-    #,['https://www.learningcrux.com/course/python-3-deep-dive-part-2', 'dummy', 'crux_pythonDeepDive2']
+    # files not on server ['https://www.learningcrux.com/course/python-3-deep-dive-part-2', 'dummy', 'crux_pythonDeepDive2']
     #, ['https://www.learningcrux.com/course/python-3-deep-dive-part-3', 'dummy', 'crux_pythonDeepDive3']
       #,['https://www.learningcrux.com/course/python-3-deep-dive-part-4-oop', 'dummy', 'crux_pythonDeepDive4']
     #, ['https://www.learningcrux.com/course/beginner-react-2019-create-a-movie-web-app', 'dummy', 'crux_react0']
@@ -25,7 +25,7 @@ courses = [
     # , ['https://www.learningcrux.com/course/full-stack-project-spring-boot-20-reactjs-redux', 'dummy', 'crux_']
     # , ['https://www.learningcrux.com/course/vue-js-2-the-complete-guide-incl-vue-router-vuexs', 'dummy', 'crux_']
     # , ['https://www.learningcrux.com/course/advanced-react-and-redux-2018-edition', 'dummy', 'crux_']
-      ['https://www.learningcrux.com/course/react-nodejs-express-mongodb-the-mern-fullstack-guide', 'dummy', 'crux_']
+     # ['https://www.learningcrux.com/course/react-nodejs-express-mongodb-the-mern-fullstack-guide', 'dummy', 'crux_']
     # , ['https://www.learningcrux.com/course/understanding-npm-nodejs-package-manager', 'dummy', 'crux_']
     # , ['https://www.learningcrux.com/course/nodejs-the-complete-guide-incl-mvc-rest-apis-graphqls', 'dummy', 'crux_']
     # , ['https://www.learningcrux.com/course/python-for-data-science-and-machine-learning-bootcamp', 'dummy', 'crux_']
@@ -86,6 +86,25 @@ def readAndProcess(url, dir_name):
 
     result = ''
     for command in ['#!/bin/sh',
+        '''
+download()
+{
+    ID=$1
+    URL=$2
+    NAME=$3
+    echo ${ID}
+    echo ${NAME}
+
+    `curl ${URL} "$NAME"`
+    `if [ $? -eq 0 ]
+            then
+                " ok"
+            else
+                " failed"
+            fi
+        `
+}        
+        ''',
                     'cd ' + "'" + BASE_DIR + "'" ,
                     'mkdir ' + "'" + dir_name + "'" ,
                     'cd ' + "'" + dir_name+ "'" ]:
@@ -110,9 +129,10 @@ def readAndProcess(url, dir_name):
                 result = sleep(WAIT_INTERVAL_AFTER_SECTION, result)
             current_section = title
         #name = title + '-' + str(i).rjust(3, '0') + ' ' + all_chapter_names[i]
-        name = str(i).rjust(3, '0') + ' ' + all_chapter_names[i] + '.mp4'
+        num = str(i).rjust(3, '0')
+        name = num + ' ' + all_chapter_names[i] + '.mp4'
         link = all_chapter_links[i].replace('/video', 'https://www.learningcrux.com/play')
-        command = "curl '" + link + "?type=hard' -L -o '" + name + "'"
+        command = "download '" + num + "' '" + link + "?type=hard -L -o ' " + '"' + name + '"'
         result = add(command, result)
     return result
 
